@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  {% load static %}
+  <link rel="stylesheet" href="{% static "css/me.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/common.css" %}"/>
+  <link rel="icon" type="image/svg+xml" href="{% static "icons/favico.png" %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+    </style>
+
+</head>
+
+<title>Обо мне
+</title>
+
+<body>
+  <div class="page">
+
+    <div class="left-side blind3">
+      <div class="left-side blind2">
+        <div class="left-side blind1">
+          <ul class="left-text">
+            <li><h3>оптимист</h3>
+            <li><h3>художник</h3>
+            <li><h3>дятел</h3>
+            </ul>
+            <img src="static/assets/face_s.png" class="face"></img>
+        </div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="menu">
+        <h1 class="focus"><span class=tooltip><a>me<span style="font-size:0.67em; width: 110px; padding: 5px; top: 30px; line-height: 20px; box-shadow:none;">Да, кэп. Ты здесь!</span></a></span></h1>
+        <h4 class="rest"><a href="projects">projects</a></h4>
+        <h4 class="rest"><a href="blog">blog</a></h4>
+        <h5 class="contacts">скайп: v.dorofeev.<br>телефон: 0 (67) 408-20-66</h5>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <ul><h3><a href="blog">Поток мусора</a></h3>
+        {% for post in posts %}
+        <li>
+
+          <h5><a href="blog#{{ post.title }}">{{ post.title|truncatechars:25 }}</a></h5>
+            {% if post.image %}
+              <img src="{{ post.image }}"}>
+            {% else %}
+              <img src="{% static "assets/noimage.png" %}" style="margin:0;"}>
+            {% endif %}
+          <p>{{ post.text|truncatechars:70|safe }}</p>
+          <!--<h6>{{ post.published_date }}</h6>-->
+        </li>
+
+        {% endfor %}
+	  </ul>
+    </div>
+
+    <div class="container">
+      <div class="motto"><h6>Буду честен - вы здесь случайно</h6>
+      </div>
+      <div class="name">СЛАВА ДОРОФЕЕВ
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="paragraph"><h2>Бессмысленная краткость</h2></div>
+      <p>Рожден женщиной, живет с женщиной. Любит сына и смотреть в <span class="window">окно</span>. За окном преимущественно Киев. Причем не самая лучшая часть</p>
+
+      <div class="paragraph"><h2>Не знаю, что лучше описывает мою девиацию</h2></div>
+      <p>Возможно, вот этот новый смешной анекдот:</p>
+
+      <div style="display:inline-table; width:inherit;">
+        <div class="citate"><h4>«Комплексный обед состоит из<br>действительной и мнимой части»</h4>
+        </div>
+      </div>
+
+      <p>Долгое время пальму первенства держал другой анекдот. Я рассказывал его жене раз 30. Или 40. Может все 100. Я так проверяю, что она меня любит. Она, наверное, догадывается и поэтому всегда смеется.</p>
+      <p style="text-align:right; margin-right:34px;"><i>Тра-та-там!</i></p>
+
+      <div style="display:inline-table; width:inherit;">
+        <div class="citate"><h4>
+          - Девочка, как тебя зовут?<br>
+          - <i>Жучка</i><br>
+          - Чего так странно?<br>
+          - <i>Родители собаку хотели</i><br></h4>
+        </div>
+      </div>
+
+      <div class="paragraph"><h2>Хоть что-то полезное</h2></div>
+      <div class="text">
+              <p>По этой ссылке доступен <a href="#">opds-каталог</a> моей библиотеки <br>
+              Если у вас есть аккаунт на yandex’e, тогда здесь моя подборка <a href="https://music.yandex.ua/users/fushka/playlists">музыки</a><br>
+              Или можете посмотреть на <a href="projects">то</a>, чем я занимался большую часть своей жизни</p></div>
+
+      <div class="paragraph"><h2>Остальное не важно.</h2></div>
+    </div>
+
+    <div class="footer"><span></span>
+    </div>
+
+
+  </div>
+</body>

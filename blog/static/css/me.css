@@ -1,0 +1,155 @@
+.focus {
+    padding-left: 187px !important;
+    display: inline-block;
+    transition: all 0.1s ease-out;
+}
+
+.left-side {
+    display: table-cell;
+    position: fixed;
+    float: left;
+    top: 0px;
+    height: 100%;
+    box-shadow: 3px 0px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.blind1 {
+    background-color: #F8B195;
+    width: 119px;
+    z-index: 7;
+}
+
+.blind2 {
+    background-color: #F67280;
+    width: 136px;
+    z-index: 8;
+}
+
+.blind3 {
+    background-color: #C06C84;
+    width: 153px;
+    z-index: 9;
+    box-shadow: 3px 0px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.face {
+    position: absolute;
+    float: left;
+    margin-left: -2px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    z-index: 10;
+    height: 50%;
+}
+
+.left-text {
+    list-style: none;
+    padding-left: 17px;
+    text-align: left;
+}
+
+.left-text li {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.left-text li:first-child {
+    margin-top: 97px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    color: white;
+    background-color: #355C7D;
+    height: 21px;
+    width: 1024px;
+    margin-top: 54px;
+    -text-align: right;
+    z-index: 0;
+}
+
+.right-side {
+    display: table-cell;
+    width: 204px;
+    min-height: 70%;
+    border-left: 1px dashed #F8B195;
+    float: right;
+    margin-top: 4.83em;
+}
+
+.right-side ul {
+    -padding-bottom: 17px;
+    margin: 0px 17px 34px 17px;
+    color: #355C7D;
+    text-align: right;
+}
+
+.right-side li {
+    position: relative;
+    list-style: none;
+    margin-top: 17px;
+    color: #4A4A4A;
+    overflow: hidden;
+}
+
+.right-side li h5{
+    padding-bottom: 5px;
+}
+
+.right-side li h6 {
+    font-style: italic;
+}
+
+.right-side li p {
+    text-align: right;
+    background: -webkit-linear-gradient(#333, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.right-side img {
+  -width:30px;
+  height:20px;
+  -background-image: url("../assets/noimage_me.png");
+}
+
+.container {
+    display: inline-block;
+    width: 632px;
+    -background-color: rgba(53, 92, 125, 0.04);
+    margin: 0px 0px 34px 187px;
+}
+
+.motto {
+    font-style: italic;
+    color: #4A4A4A;
+    margin-left: 5px;
+}
+
+.name {
+    font-size: 4em;
+    font-weight: normal;
+    ;
+    color: #355C7D;
+    margin-top: -8px;
+}
+
+.paragraph {
+    color: #355C7D;
+    margin: 17px 17px 17px 0;
+}
+
+.container p {
+    margin: 17px;
+}
+
+.citate {
+    background-color: #F7F9FA;
+    border: 1px dashed #F8B195;
+    padding: 5px 10px;
+    -color: #355C7D;
+    display: inline-block;
+    float: right;
+    margin-right: 34px;
+}
