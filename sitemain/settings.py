@@ -25,7 +25,7 @@ SECRET_KEY = '&0fvo#76l&^^q*-yr(-vkd!86-3)a54ndo-ybmm2nm)kb67u%t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [fushka.pythonanywhere.com]
 
 
 # Application definition
