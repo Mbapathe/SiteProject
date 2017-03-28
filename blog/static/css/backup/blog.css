@@ -1,0 +1,164 @@
+.left-side {
+    display: table-cell;
+    position: fixed;
+    float: left;
+    top: 0px;
+    height: 100%;
+    box-shadow: 3px 0px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.blind1 {
+    background-color: #F8B195;
+    width: 17px;
+    z-index: 7;
+}
+
+.blind2 {
+    background-color: #F67280;
+    width: 34px;
+    z-index: 8;
+}
+
+.blind3 {
+    background-color: #C06C84;
+    width: 68px;
+    z-index: 9;
+    box-shadow: 3px 0px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    color: white;
+    background-color: #355C7D;
+    height: 21px;
+    width: 1024px;
+	  margin-top:54px;
+    -text-align: right;
+    z-index: 0;
+}
+
+.right-side {
+    display: table-cell;
+    width: 204px;
+    min-height: 70%;
+    border-left: 1px dashed #F8B195;
+    float: right;
+    margin-top: 0px;
+}
+
+.right-side ul {
+  -padding-right: 0px 17px;
+  margin: 0px 17px;
+  color:#355C7D;
+  text-align: right;
+}
+
+.right-side li {
+  position:relative;
+	list-style: none;
+  margin-top: 17px;
+  color: #4A4A4A;
+  overflow: hidden;
+
+}
+
+.right-side li h6{
+	font-style: italic;
+}
+
+.right-side li p{
+  text-align: right;
+  background: -webkit-linear-gradient(#333, #eee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1em;
+}
+
+.container {
+    display: inline-block;
+    width: 649px;
+    -background-color: #FAFAFA;
+    margin: 17px 0px 51px 153px;
+    border-top: 2px solid #C06C84;
+}
+
+.post-date{
+  margin-top: -17px;
+  font-style: italic;
+  text-align: right;
+  -color:#ffffff;
+  -background-color:#F8B195;
+}
+
+.conteiner-top {
+    display: block;
+    padding-left:34px;
+    margin-top: 17px;
+}
+
+.post-name {
+    display: inline-block;
+    color:#355C7D;
+}
+
+.post-image{
+  width:649px;
+  height:188px;
+  margin:17px auto;
+  overflow: hidden;
+  border: 1px dashed #F8B195;
+  text-align: center;
+  -background: url("../assets/noimage.png")
+}
+
+.post-image img {
+  width:100%;
+  opacity: 0.5;
+  margin-top: -9%;
+  transition: 0.5s;
+}
+
+.container:hover .post-image img,
+.container:hover .container-bottom ,
+.container:hover .btn {
+  opacity: 1;
+}
+
+.container-middle{
+  margin: 0px 17px;
+  margin-left: 34px;
+}
+
+.container-bottom{
+  display:block;
+  margin-top:17px;
+  height:17px;
+  border-top:1px dashed #F8B195;
+  text-align:right;
+  -background-image:url("assets/woodpecker.png");
+  -background-repeat: no-repeat;
+  -background-size: cover;
+  opacity: 0.3;
+  -background-position: center;
+  background-color: #355C7D;
+}
+
+.separator{
+  display: inline-block;
+  width: 174px;
+  min-height: 1px;
+  margin: 34px 16px 0px 152px;
+  border-bottom: 1px dashed #F8B195;
+  text-align: center;
+  font-style: italic;
+}
+
+.pagination {
+	text-align:center;
+	display: inline-block;
+    width: 649px;
+    -background-color: #FAFAFA;
+    margin: 17px 0px 0px 153px;
+    
+}

@@ -125,20 +125,20 @@
 
 .motto {
     font-style: italic;
-    color: #323232;
+    color: #4A4A4A;
     margin-left: 5px;
 }
 
 .name {
-    font-family: 'HelveticaNeueCyr-UltraLight';
-	font-size: 4em;
+    font-size: 4em;
     font-weight: normal;
+    ;
     color: #355C7D;
     margin-top: -8px;
 }
 
 .paragraph {
-    color: #323232/*#355C7D*/;
+    color: #355C7D;
     margin: 17px 17px 17px 0;
 }
 
