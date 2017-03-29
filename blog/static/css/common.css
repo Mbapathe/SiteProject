@@ -86,15 +86,15 @@ h6 {
 }
 
 p {
-    font-size: 0.83em;
+    font-size: 1em;
     margin-top: 0em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
     font-weight: 100;
     line-height: 1.6em;
     text-align: justify;
-    color: #4A4A4A;
+    color: #323232;
 }
 
 .p1 {
@@ -104,77 +104,77 @@ p {
     margin-left: 0;
     margin-right: 0;
     font-weight: 100;
-    color:#8E8C8F;
+    color:#4C4C4C;
     text-align: right;
 }
 
 .page {
     display: table;
-    width: 1024px;
+    width: 1280px;
     -height: 100%;
     margin: 0px auto;
-    background-color: #ffffff;
+    background-color: #F8F8F8;
 }
 
 .header {
-    background-color: #355C7D;
     width: auto;
     margin-left: 4px;
-    height: 70px;
-    box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    line-height: 70px;
+    height: 104px;
+    color: #355C7D/*#ffffff*/;
     z-index: 2;
     margin-bottom: 34px;
-    cursor: pointer;
+}
+
+.menu {
+  padding: 34px 0px;
 }
 
 .menu a {
   color:inherit;
   text-decoration:none;
+
 }
 
 .focus {
-    padding-left: 110px;
+    padding-left: 176px;
     display: inline-block;
-    transition: all 0.1s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .rest {
     margin-left: 5px;
-    vertical-align: top;
     font-weight: 100;
     display: inline-block;
     transition: all 0.3s ease-out;
 }
 
-.menu:hover .rest{
+.!menu:hover .rest{
 	font-size: 2em;
 }
 
-.rest:hover {
+.!rest:hover {
 	color:#F8B195;
 }
 
-.menu:focus .rest,
+.!menu:focus .rest,
 .menu:active  .rest{
   color:#F67280;
   -font-size: 1em;
 }
 
-.menu:hover .focus {
+.!menu:hover .focus {
   font-size: 1em;
 }
 
-.focus:hover {
+.!focus:hover {
   color: #F67280;
 }
 
 .contacts {
-    margin-top: 1%;
+    -margin-top: 1%;
     margin-right: 17px;
     display: inline-block;
-    color: white;
+    color: #323232;
     float: right;
     line-height: 2em;
     font-weight: 100;
@@ -231,9 +231,9 @@ p {
 
 .separator{
   display: inline-block;
-  width: 630px;
+  width: 865px;
   min-height: 1px;
-  margin: 34px 16px 0px 152px;
+  margin: 0px 0px 34px 142px;
   border-bottom: 1px dashed #F8B195;
   text-align: center;
   font-style: italic;
@@ -290,6 +290,6 @@ p {
   color: #4A4A4A;
   text-align: center;
   font-style: normal;
-  font-size: 1em;
+  font-size: 0.83em;
   z-index:11;
  }
