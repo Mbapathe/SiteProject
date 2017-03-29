@@ -27,18 +27,6 @@
     box-shadow: 3px 0px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-.footer {
-    position: relative;
-    bottom: 0;
-    color: white;
-    background-color: #355C7D;
-    height: 21px;
-    width: 1280px;
-	  margin-top:54px;
-    -text-align: right;
-    z-index: 0;
-}
-
 .right-side {
     display: table-cell;
     width: 255px;
@@ -46,6 +34,7 @@
     border-left: 1px dashed #F8B195;
     float: right;
     margin-top: 0px;
+    -background-color: #ffffff;
 }
 
 .right-side ul {
