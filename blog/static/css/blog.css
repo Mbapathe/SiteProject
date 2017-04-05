@@ -1,3 +1,7 @@
+.page {
+    background-color: #FFFFFF !important;
+}
+
 .left-side {
     display: table-cell;
     position: fixed;
@@ -7,21 +11,21 @@
     box-shadow: 3px 0px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-.blind1 {
+.!blind1 {
     background-color: #F8B195;
     width: 17px;
     z-index: 7;
 }
 
-.blind2 {
+.!blind2 {
     background-color: #F67280;
     width: 34px;
     z-index: 8;
 }
 
-.blind3 {
+.!blind3 {
     background-color: #C06C84;
-    width: 68px;
+    width: 51px;
     z-index: 9;
     box-shadow: 3px 0px 8px 0 rgba(0, 0, 0, 0.5);
 }
@@ -33,7 +37,7 @@
     background-color: #355C7D;
     height: 21px;
     width: 1024px;
-	  margin-top:54px;
+    margin-top: 54px;
     -text-align: right;
     z-index: 0;
 }
@@ -48,117 +52,120 @@
 }
 
 .right-side ul {
-  -padding-right: 0px 17px;
-  margin: 0px 17px;
-  color:#355C7D;
-  text-align: right;
+    -padding-right: 0px 17px;
+    margin: 0px 17px;
+    color: #355C7D;
+    text-align: right;
 }
 
 .right-side li {
-  position:relative;
-	list-style: none;
-  margin-top: 17px;
-  color: #4A4A4A;
-  overflow: hidden;
-
+    position: relative;
+    list-style: none;
+    margin-top: 17px;
+    color: #4A4A4A;
+    overflow: hidden;
 }
 
-.right-side li h6{
-	font-style: italic;
+.right-side li h6 {
+    font-style: italic;
 }
 
-.right-side li p{
-  text-align: right;
-  background: -webkit-linear-gradient(#333, #eee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1em;
+.right-side li p {
+    text-align: right;
+    background: -webkit-linear-gradient(#333, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1em;
 }
 
 .container {
     display: inline-block;
-    width: 649px;
+    width: 865px;
     -background-color: #FAFAFA;
-    margin: 17px 0px 51px 153px;
-    border-top: 2px solid #C06C84;
+    margin: 0px 0px 68px 142px;
+    border-top: 2px solid #F8B195;
+    transition: 0.5s;
 }
 
-.post-date{
-  margin-top: -17px;
-  font-style: italic;
-  text-align: right;
-  -color:#ffffff;
-  -background-color:#F8B195;
+.post-date {
+    margin-top: -17px;
+    font-style: italic;
+    text-align: right;
+    -color: #ffffff;
+    -background-color: #F8B195;
 }
 
 .conteiner-top {
     display: block;
-    padding-left:34px;
+    padding-left: 34px;
     margin-top: 17px;
 }
 
 .post-name {
     display: inline-block;
-    color:#355C7D;
+    color: #355C7D;
 }
 
-.post-image{
-  width:649px;
-  height:188px;
-  margin:17px auto;
-  overflow: hidden;
-  border: 1px dashed #F8B195;
-  text-align: center;
-  -background: url("../assets/noimage.png")
+.post-image {
+    width: 90%;
+    height: 208px;
+    margin: 17px auto;
+    overflow: hidden;
+    border: 1px dashed #F8B195;
+    text-align: center;
+    -background: url("../assets/noimage.png")
 }
 
 .post-image img {
-  width:100%;
-  opacity: 0.5;
-  margin-top: -9%;
-  transition: 0.5s;
+    width: 100%;
+    opacity: 1;
+    margin-top: -9%;
+    transition: 0.5s;
+}
+
+.container-middle {
+    margin: 0px 17px;
+    margin-left: 34px;
+}
+
+.link {
+    opacity: 0.3;
+
+}
+
+.container-bottom {
+    display: block;
+    margin-top: 17px;
+    height: 0;
+    border-bottom: 1px dashed #F8B195;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+    opacity: 0.3;
+    background-color: #355C7D;
 }
 
 .container:hover .post-image img,
-.container:hover .container-bottom ,
-.container:hover .btn {
-  opacity: 1;
+.container:hover .container-bottom,
+.container:hover .btn,
+.container:hover .link {
+    opacity: 1;
 }
 
-.container-middle{
-  margin: 0px 17px;
-  margin-left: 34px;
-}
-
-.container-bottom{
-  display:block;
-  margin-top:17px;
-  height:17px;
-  border-top:1px dashed #F8B195;
-  text-align:right;
-  -background-image:url("assets/woodpecker.png");
-  -background-repeat: no-repeat;
-  -background-size: cover;
-  opacity: 0.3;
-  -background-position: center;
-  background-color: #355C7D;
-}
-
-.separator{
-  display: inline-block;
-  width: 174px;
-  min-height: 1px;
-  margin: 34px 16px 0px 152px;
-  border-bottom: 1px dashed #F8B195;
-  text-align: center;
-  font-style: italic;
+.separator {
+    display: inline-block;
+    width: 174px;
+    min-height: 1px;
+    margin: 34px 16px 0px 152px;
+    border-bottom: 1px dashed #F8B195;
+    text-align: center;
+    font-style: italic;
 }
 
 .pagination {
-	text-align:center;
-	display: inline-block;
-    width: 649px;
+    text-align: center;
+    display: inline-block;
+    width: inherit;
     -background-color: #FAFAFA;
-    margin: 17px 0px 0px 153px;
-    
+    -margin: 17px 0px 0px 153px;
 }

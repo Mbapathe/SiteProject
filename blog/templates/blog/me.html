@@ -35,25 +35,25 @@
 
     <div class="header">
       <div class="menu">
-        <h1 class="focus"><span class=tooltip><a>me<span style="font-size:0.67em; width: 110px; padding: 5px; top: 30px; line-height: 20px; box-shadow:none;">Да, кэп. Ты здесь!</span></a></span></h1>
-        <h4 class="rest"><a href="projects">projects</a></h4>
-        <h4 class="rest"><a href="blog">blog</a></h4>
+        <h1 class="rest"><a href="projects">projects</a></h1>
+        <h1 class="rest"><a href="blog">blog</a></h1>
+        <h1 class="focus">me</h1>
         <h5 class="contacts">скайп: v.dorofeev.<br>телефон: 0 (67) 408-20-66</h5>
       </div>
     </div>
 
     <div class="right-side">
-      <ul><h3><a href="blog">Поток мусора</a></h3>
+      <ul><h2><a href="blog">Лета</a></h2>
         {% for post in posts %}
         <li>
 
           <h5><a href="blog#{{ post.title }}">{{ post.title|truncatechars:25 }}</a></h5>
-            {% if post.image %}
+            <a href="blog#{{ post.title }}" style="text-decoration:none;">{% if post.image %}
               <img src="{{ post.image }}"}>
             {% else %}
               <img src="{% static "assets/noimage.png" %}" style="margin:0;"}>
             {% endif %}
-          <p>{{ post.text|truncatechars:70|safe }}</p>
+          <p class="p1">{{ post.text|truncatechars:90|safe }}</p></a>
           <!--<h6>{{ post.published_date }}</h6>-->
         </li>
 

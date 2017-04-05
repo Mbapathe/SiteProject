@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
   {% load static %}
+  {% load usertags %}
   <link rel="stylesheet" href="{% static "css/blog.css" %}"/>
   <link rel="stylesheet" href="{% static "css/common.css" %}"/>
   <link rel="icon" type="image/svg+xml" href="{% static "icons/favico.png" %}">
@@ -17,21 +18,31 @@
 </title>
 
 <body>
+  <script>
+    function collapsElement(id) {
+      if ( document.getElementById(id).style.display != "none" ) {
+        document.getElementById(id).style.display = 'none';
+      }
+      else {
+        document.getElementById(id).style.display = '';
+      }
+    }
+ </script>
+
   <div class="page">
 
     <div class="left-side blind3">
       <div class="left-side blind2">
         <div class="left-side blind1">
-          <img src="static/assets/timeline.png" style="margin-left:110px; margin-top: 74px;">
         </div>
       </div>
     </div>
 
     <div class="header">
       <div class="menu">
-        <h1 class="focus"><span class=tooltip><a>blog<span style="font-size:0.67em; width: 110px; padding: 5px; top: 30px; line-height: 20px; box-shadow:none;">Да, кэп. Ты здесь!</span></a></span></h1>
-        <h4 class="rest"><a href="me">me</a></h4>
-        <h4 class="rest"><a href="projects">projects</a></h4>
+        <h1 class="rest"><a href="projects">projects</a></h1>
+        <h1 class="focus">blog</h1>
+        <h1 class="rest"><a href="me">me</a></h1>
         <h5 class="contacts">скайп: v.dorofeev.<br>телефон: 0 (67) 408-20-66</h5>
         <!--<img src="css/assets/woodpecker.png" style="height:100px; float:right; transform: rotate(90deg); margin-right:51px; margin-top:-17px;">-->
       </div>
@@ -41,7 +52,7 @@
       <ul><h3></h3>
         {% for post in posts %}
         <li>
-          <p><a href="#{{ post.title }}">{{ post.text|truncatechars:40|safe }}</a></p>
+          <h5><a href="#{{ post.title }}">{{ post.text|truncatechars:40 }}</a></h5>
           <h6>{{ post.published_date }}</h6>
         </li>
         {% endfor %}
@@ -53,7 +64,7 @@
 
 			{% if posts.has_next %}
             <a href="?page={{ posts.next_page_number }}"><b>>></b></a>
-			
+
 			{% endif %}
 		  </span>
 		</li>
@@ -62,22 +73,35 @@
 
     {% for post in posts %}
     <div class="container">
+
       <div class="post-date"><h6>{{ post.published_date|date:"d / m / Y"}}</h6></div>
       <div class="conteiner-top">
             <h2 class="post-name"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
       </div>
+
       <div class="post-image"><a name="{{ post.title }}">
         {% if post.image %}
           <img src="{{ post.image }}"}>
         {% else %}
           <img src="{% static "assets/noimage.png" %}" style="margin:0;"}>
         {% endif %}
-		</a>
+		    </a>
       </div>
+
       <div class="container-middle">
-        <p>{{ post.text|safe }}</p>
+        <p>{{ post.text|truncatewords:80|safe }}</p>
+
+        <div class="link"><a href="javascript:collapsElement('l{{ post.text|truncatewords:3 }}')" title="" rel="nofollow">Читать дальше</a>
+          <div id="l{{ post.text|truncatewords:3 }}" style="display: none">
+            <p><br>...&nbsp{{ post.text|truncatewords_slice:80|safe }}</p>
+          </div>
+        </div>
+
       </div>
-      <div class="container-bottom"></div>
+
+      <div class="container-bottom">
+        <!--<a href="#{{ post.text|truncatechars:10 }}" style="color:white; text-decoration:none;">Читать полный текст</a>-->
+      </div>
     </div>
     {% endfor %}
 

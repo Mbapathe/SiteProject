@@ -1,7 +1,5 @@
-.focus {
-    padding-left: 187px !important;
-    display: inline-block;
-    transition: all 0.1s ease-out;
+.menu {
+  margin-left: 221px !important;
 }
 
 .left-side {
@@ -76,6 +74,7 @@
     border-left: 1px dashed #F8B195;
     float: right;
     margin-top: 4.83em;
+    background-color: #ffffff;
 }
 
 .right-side ul {
@@ -116,9 +115,9 @@
 
 .container {
     display: inline-block;
-    width: 632px;
+    width: 802px;
     -background-color: rgba(53, 92, 125, 0.04);
-    margin: 0px 0px 34px 187px;
+    margin: 0px 0px 34px 221px;
 }
 
 .motto {
@@ -145,7 +144,7 @@
 }
 
 .citate {
-    background-color: #F7F9FA;
+    background-color: #FFFFFF;
     border: 1px dashed #F8B195;
     padding: 5px 10px;
     -color: #355C7D;

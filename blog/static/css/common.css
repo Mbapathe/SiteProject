@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-color: #a2A2A2;
+    background-color: #A2A2A2;
     font-family: 'Didact Gothic', sans-serif;
     -height: 100%;
     -background-image: url("../assets/body_background.png");
@@ -23,7 +23,7 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 h1 {
@@ -105,7 +105,7 @@ p {
     margin-left: 0;
     margin-right: 0;
     font-weight: 100;
-    color:#4C4C4C;
+    color: #4C4C4C;
     text-align: right;
 }
 
@@ -121,179 +121,185 @@ p {
     width: inherit;
     margin-left: 0;
     height: 104px;
-    color: #355C7D/*#ffffff*/;
+    color: #355C7D/*#ffffff*/
+    ;
     z-index: 2;
     margin-bottom: 34px;
-    -background-color: #F8F8F8;
+    background-color: #355C7D;
     -position: fixed;
+    line-height: 104px;
+    vertical-align: middle;
 }
 
 .menu {
-  padding: 34px 0px;
+    -padding: 17px 0px;
+    margin-left: 176px;
+    margin-top: 0;
 }
 
 .menu a {
-  color:inherit;
-  text-decoration:none;
+    color: inherit;
+    text-decoration: none;
 }
 
-.focus {
-    padding-left: 176px;
+.menu h1 {
+    margin-left: 17px;
     display: inline-block;
     transition: all 0.3s ease-out;
+}
+
+.menu h1:first-child {
+    margin-left: 0px;
 }
 
 .rest {
-    margin-left: 7px;
-    display: inline-block;
-    transition: all 0.3s ease-out;
-    border-bottom: 3px solid #F67280;
+    color: #ffffff/*#F8B195*/
+    ;
+}
+
+.focus {
+    color: #F8B195/*#F67280*/
+    ;
 }
 
 .rest:hover {
-	color:#F8B195;
-  border:none;
+    color: #F67280;
+    -border-bottom: 1px dashed #C06C84;
 }
 
-.menu:focus .rest,
-.menu:active  .rest,
-.focus:hover {
-  color:#F67280;
+.menu:focus .rest, .menu:active .rest, .focus:hover {
+    color: #C06C84;
 }
 
 .contacts {
-    -margin-top: 1%;
-    -margin-right: 17px;
-    margin-left:705px;
+    float: right;
     display: inline-block;
-    color: #323232;
+    color: #ffffff;
     line-height: 2em;
     font-weight: 100;
     text-align: right;
+    margin: 21px 17px auto auto;
 }
 
-.btn{
-	display:inline-block;
-	background-color: #355C7D /*#C06C84*/;
-	opacity: 0.3;
-	padding:5px 10px;
-	border-radius:2px;
-  border:1px solid #F8B195;
-	margin-right:10px;
-	margin-top:2%;
-	color:#ffffff;
-	font-weight:100;
-  min-width:80px;
-  text-align:center;
-
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-  transition: all 0.3s ease-out;
+.btn {
+    display: inline-block;
+    background-color: #355C7D/*#C06C84*/
+    ;
+    opacity: 0.3;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid #F8B195;
+    margin-right: 10px;
+    margin-top: 2%;
+    color: #ffffff;
+    font-weight: 100;
+    min-width: 80px;
+    text-align: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+    transition: all 0.3s ease-out;
 }
 
-.btn:hover{
-  box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.5);
-  background-color: #F8B195;
- }
-
-.btn:focus,
-.btn:active {
-  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
-  background-color: #F67280;
+.btn:hover {
+    box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.5);
+    background-color: #F8B195;
 }
 
-.btn:last-child{
-  margin-right:34px;
+.btn:focus, .btn:active {
+    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+    background-color: #F67280;
 }
 
-.btn a{
-  color: #ffffff;
-  text-decoration:none;
+.btn:last-child {
+    margin-right: 34px;
+}
+
+.btn a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .btn:hover a {
-  color: #355C7D;
+    color: #355C7D;
 }
 
-.separator{
-  display: inline-block;
-  width: 865px;
-  min-height: 1px;
-  margin: 0px 0px 34px 142px;
-  border-bottom: 1px dashed #F8B195;
-  text-align: center;
-  font-style: italic;
+.separator {
+    display: inline-block;
+    width: 865px;
+    min-height: 1px;
+    margin: 0px 0px 34px 142px;
+    border-bottom: 1px dashed #F8B195;
+    text-align: center;
+    font-style: italic;
 }
 
-.emoji{
-  display: inline-block;
-  background: url("../icons/emoji.png") top left no-repeat;
-  width:20px;
-  height: 20px;
-  vertical-align: bottom;
+.emoji {
+    display: inline-block;
+    background: url("../icons/emoji.png") top left no-repeat;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
 }
 
-.emoji-shutup{
-  background-position: -420px -440px;
+.emoji-shutup {
+    background-position: -420px -440px;
 }
 
 .emoji-youknow {
-  background-position: -400px -140px;
+    background-position: -400px -140px;
 }
 
 .tooltip {
-  position: relative;
-
+    position: relative;
 }
 
 .tooltip a {
-  border-bottom: 1px dashed #355C7D;
+    border-bottom: 1px dashed #355C7D;
 }
 
 .tooltip a:hover {
-  border-bottom: none;
+    border-bottom: none;
 }
-
 
 .tooltip a span {
-  display: none;
-  transition: all 0.3s ease-out;
+    display: none;
+    transition: all 0.3s ease-out;
 }
 
-.tooltip a:hover span{
-  display: inline-block;
-  position: absolute;
-  width: 210px;
-  height: auto;
-  -left: -100px;
-  top: 20px;
-  right:0;
-  padding: 10px 10px;
-  border-radius: 3px;
-  border: 2px solid #F8B195;
-  box-shadow: 0px 0px 0px 10000px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-  color: #4A4A4A;
-  text-align: left;
-  font-style: normal;
-  font-size: 0.83em;
-  z-index:11;
-  line-height: 1.5em;
- }
+.tooltip a:hover span {
+    display: inline-block;
+    position: absolute;
+    width: 210px;
+    height: auto;
+    -left: -100px;
+    top: 20px;
+    right: 0;
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: 2px solid #F8B195;
+    box-shadow: 0px 0px 0px 10000px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #4A4A4A;
+    text-align: left;
+    font-style: normal;
+    font-size: 0.83em;
+    z-index: 11;
+    line-height: 1.5em;
+}
 
- .footer {
-     position: relative;
-     bottom: 0;
-     color: white;
-     background-color: #355C7D;
-     height: 21px;
-     width: 1280px;
- 	   margin-top:54px;
-     -text-align: right;
-     z-index: 0;
+.footer {
+    position: relative;
+    bottom: 0;
+    color: white;
+    background-color: #355C7D;
+    height: 21px;
+    width: 1280px;
+    margin-top: 54px;
+    -text-align: right;
+    z-index: 0;
 }
