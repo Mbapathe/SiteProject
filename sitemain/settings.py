@@ -26,7 +26,7 @@ SECRET_KEY = '&0fvo#76l&^^q*-yr(-vkd!86-3)a54ndo-ybmm2nm)kb67u%t'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'fushka.pythonanywhere.com',
+    'mbapathe.pythonanywhere.com',
     '127.0.0.1',
     ]
 
