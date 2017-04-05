@@ -8,26 +8,26 @@
     float: left;
     top: 0px;
     height: 100%;
-    -box-shadow: 3px 0px 4px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 0px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .blind1 {
-    -background-color: #F8B195;
+    background-color: #F8B195;
     width: 119px;
     z-index: 7;
 }
 
 .blind2 {
-    -background-color: #F67280;
+    background-color: #F67280;
     width: 136px;
     z-index: 8;
 }
 
 .blind3 {
-    -background-color: #C06C84;
+    background-color: #C06C84;
     width: 153px;
     z-index: 9;
-    -box-shadow: 3px 0px 8px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 0px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .face {
@@ -42,17 +42,17 @@
 
 .left-text {
     list-style: none;
-    padding-left: 34px;
+    padding-left: 17px;
     text-align: left;
 }
 
 .left-text li {
     margin-bottom: 10px;
-    color: #C06C84;
+    color: #ffffff;
 }
 
 .left-text li:first-child {
-    margin-top: 134px;
+    margin-top: 97px;
 }
 
 .footer {
@@ -120,10 +120,6 @@
     margin: 0px 0px 34px 221px;
 }
 
-.!c-name {
-  margin: 0px 0px 34px 176px;
-}
-
 .motto {
     font-style: italic;
     color: #4A4A4A;
@@ -143,6 +139,10 @@
     margin: 17px 17px 17px 0;
 }
 
+.container p {
+    margin: 17px;
+}
+
 .citate {
     background-color: #FFFFFF;
     border: 1px dashed #F8B195;
@@ -150,6 +150,5 @@
     -color: #355C7D;
     display: inline-block;
     float: right;
-    margin-right: 0;
-    margin-bottom: 17px;
+    margin-right: 34px;
 }
