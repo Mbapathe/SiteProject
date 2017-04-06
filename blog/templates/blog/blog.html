@@ -52,7 +52,7 @@
       <ul><h3></h3>
         {% for post in posts %}
         <li>
-          <h5><a href="#{{ post.title }}">{{ post.text|truncatechars:40 }}</a></h5>
+          <h5><a href="#{{ post.title }}">{{ post.text|truncatechars:40|safe }}</a></h5>
           <h6>{{ post.published_date }}</h6>
         </li>
         {% endfor %}
@@ -76,7 +76,7 @@
 
       <div class="post-date"><h6>{{ post.published_date|date:"d / m / Y"}}</h6></div>
       <div class="conteiner-top">
-            <h2 class="post-name"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <h2 class="post-name"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title|safe }}</a></h2>
       </div>
 
       <div class="post-image"><a name="{{ post.title }}">
