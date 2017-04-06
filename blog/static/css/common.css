@@ -129,6 +129,16 @@ p {
     -position: fixed;
     line-height: 104px;
     vertical-align: middle;
+
+    -webkit-transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: box-shadow;
+
+    transform: perspective(3px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
 }
 
 .menu {
@@ -162,13 +172,21 @@ p {
     ;
 }
 
+.header:hover {
+  box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
 .rest:hover {
-    color: #F67280;
+    color: #F8B195;
     -border-bottom: 1px dashed #C06C84;
 }
 
-.menu:focus .rest, .menu:active .rest, .focus:hover {
+.menu:focus .rest, .menu:active .rest {
     color: #C06C84;
+}
+
+.menu:hover .focus {
+    color: #A2A2A2;
 }
 
 .contacts {

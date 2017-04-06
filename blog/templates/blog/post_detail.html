@@ -19,28 +19,20 @@
 <body>
   <div class="page">
 
-    <div class="left-side blind3">
-      <div class="left-side blind2">
-        <div class="left-side blind1">
-        </div>
-      </div>
-    </div>
-
     <div class="header">
       <div class="menu">
-        <h1 class="focus"><span class=tooltip><a>post<span style="font-size:0.67em; width: 110px; padding: 5px; top: 30px; line-height: 20px; box-shadow:none;">Да, кэп. Ты здесь!</span></a></span></h1>
-        <h4 class="rest"><a href="../../blog">blog</a></h4>
+        <h1 class="rest"><a href="../../blog">back to blog</a></h1>
+        <h1 class="focus">post</h1>
         <h5 class="contacts">скайп: v.dorofeev.<br>телефон: 0 (67) 408-20-66</h5>
         <!--<img src="css/assets/woodpecker.png" style="height:100px; float:right; transform: rotate(90deg); margin-right:51px; margin-top:-17px;">-->
       </div>
     </div>
 
-    
-    <div class="container">
-	{% if post.published_date %}
-      <div class="post-date"><h6>{{ post.published_date|date:"d / m / Y"}}</h6></div>
-	{% endif %}	
-	<div class="conteiner-top">
+    <div class="container" style="margin-left:208px;">
+	     {% if post.published_date %}
+       <div class="post-date"><h6>{{ post.published_date|date:"d / m / Y"}}</h6></div>
+	      {% endif %}
+	       <div class="conteiner-top">
             <h2 class="post-name">{{ post.title }}</h2>
       </div>
       <div class="post-image"><a name="{{ post.title }}">
@@ -56,7 +48,7 @@
       </div>
       <div class="container-bottom"></div>
     </div>
-    
+
 
 
     <div class="footer"><span></span>
