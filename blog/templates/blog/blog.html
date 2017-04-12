@@ -101,14 +101,16 @@
       </div>
 
       <div class="container-middle">
-        <p>{{ post.text|truncatewords:80|safe }}</p>
-
+        {% if post.text|truncatewords_slice:80|length_is:"0" %}
+		<p>{{ post.text|safe }}</p>
+        {% else %}
+		<p>{{ post.text|truncatewords:80|safe }}</p>
         <div class="link"><a href="javascript:collapsElement('l{{ post.text|truncatewords:3 }}')" title="" rel="nofollow">Читать дальше</a>
           <div id="l{{ post.text|truncatewords:3 }}" style="display: none">
             <p><br>...&nbsp{{ post.text|truncatewords_slice:80|safe }}</p>
           </div>
         </div>
-
+		{% endif %}
       </div>
 
       <div class="container-bottom">
