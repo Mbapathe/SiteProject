@@ -93,7 +93,7 @@
 
       <div class="post-image"><a name="{{ post.title }}">
         {% if post.image %}
-          <img src="{{ post.image }}"}>
+          <img src="media/{{ post.image }}">
         {% else %}
           <img src="{% static "assets/noimage.png" %}" style="margin:0;"}>
         {% endif %}

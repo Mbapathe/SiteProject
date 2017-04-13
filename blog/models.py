@@ -3,7 +3,8 @@ from django.utils import timezone
 import os
 
 def get_image_path(instance, filename):
-    return os.path.join('static/assets/blog', str(instance.id), filename )
+    return os.path.join('media', str(instance.id), filename )
+#    pass
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
@@ -13,7 +14,7 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
-    image = models.ImageField(upload_to='static/assets/blog', blank=True, null=True)
+    image = models.ImageField(upload_to='media/blog_media', blank=True, null=True)
     #post_image = get_image_path(objects.image, 'image')
 
     def publish(self):
