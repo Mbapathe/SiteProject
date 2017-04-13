@@ -60,7 +60,7 @@
 
           <h5><a href="blog#{{ post.title }}">{{ post.title|truncatechars:25 }}</a></h5>
             <a href="blog#{{ post.title }}" style="text-decoration:none;">{% if post.image %}
-              <img src="{{ post.image }}"}>
+              <img src="media/{{ post.image }}"}>
             {% else %}
               <img src="{% static "assets/noimage.png" %}" style="margin:0;"}>
             {% endif %}
