@@ -1,121 +1,32 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
 
-<html lang="ru">
+{% block header %}<link rel="stylesheet" href="{% static 'css/me.css' %}"/>{% endblock %}
+{% block title %}Что-то обо мне{% endblock %}
 
-<head>
-  <meta charset="utf-8">
-  {% load static %}
-  <link rel="stylesheet" href="{% static "css/me.css" %}"/>
-	<link rel="stylesheet" href="{% static "css/common.css" %}"/>
-  <link rel="icon" type="image/svg+xml" href="{% static "icons/favico.png" %}">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
-    </style>
-
-</head>
-
-<title>Обо мне
-</title>
-
-<body>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-97217179-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-  <div class="page">
-
-    <div class="left-side blind3">
-      <div class="left-side blind2">
-        <div class="left-side blind1">
-          <ul class="left-text">
-            <li><h3>оптимист</h3>
-            <li><h3>художник</h3>
-            <li><h3>дятел</h3>
-            </ul>
-            <img src="static/assets/face_s.png" class="face"></img>
-        </div>
-      </div>
-    </div>
-
-    <div class="header">
-      <div class="menu">
-        <h1 class="rest"><a href="projects">projects</a></h1>
-        <h1 class="rest"><a href="blog">blog</a></h1>
-        <h1 class="focus">me</h1>
-        <h5 class="contacts">скайп: v.dorofeev.<br>телефон: 0 (67) 408-20-66</h5>
-      </div>
-    </div>
-
-    <div class="right-side">
-      <ul><h2><a href="blog">Лета</a></h2>
-        {% for post in posts %}
-        <li>
-
-          <h5><a href="blog#{{ post.title }}">{{ post.title|truncatechars:25 }}</a></h5>
-            <a href="blog#{{ post.title }}" style="text-decoration:none;">{% if post.image %}
-              <img src="media/{{ post.image }}"}>
-            {% else %}
-              <img src="{% static "assets/noimage.png" %}" style="margin:0;"}>
-            {% endif %}
-          <p class="p1">{{ post.text|truncatechars:90|safe }}</p></a>
-          <!--<h6>{{ post.published_date }}</h6>-->
-        </li>
-
-        {% endfor %}
-	  </ul>
-    </div>
-
-    <div class="container c-name">
-      <div class="motto"><h6>д.и.х.с.н.</h6>
-      </div>
-      <div class="name">СЛАВА ДОРОФЕЕВ
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="paragraph"><h2>Бессмысленная краткость</h2></div>
-      <p>Рожден женщиной, живет с женщиной. Любит сына и смотреть в окно. За окном преимущественно Киев. Причем не самая лучшая часть</p>
-
-      <div class="paragraph"><h2>Не знаю, что лучше описывает мою девиацию</h2></div>
-      <p>Возможно, вот этот новый смешной анекдот:</p>
-
-      <div style="display:inline-table; width:inherit;">
-        <div class="citate"><h4>«Комплексный обед состоит из<br>действительной и мнимой части»</h4>
-        </div>
-      </div>
-
-      <p>Долгое время пальму первенства держал другой анекдот. Я рассказывал его жене раз 30. Или 40. Может все 100. Я так проверяю, что она меня любит. Она, наверное, догадывается и поэтому всегда смеется.</p>
-      <p style="text-align:right; margin-right:34px;"><i>Тра-та-там!</i></p>
-
-      <div style="display:inline-table; width:inherit;">
-        <div class="citate"><h4>
-          - Девочка, как тебя зовут?<br>
-          - <i>Жучка</i><br>
-          - Чего так странно?<br>
-          - <i>Родители собаку хотели</i><br></h4>
-        </div>
-      </div>
-      <p>Увы, но с детьми это не работает. Они смеются над <i>несмешными</i> и полностью игнорируют <i>смешное</i>.</p>
-
-      <div class="paragraph"><h2>Хоть что-то полезное</h2></div>
-      <div class="text">
-              <p>По этой ссылке доступен <span class="tooltip"><a>opds-каталог<span>На самом деле <i>был</i> доступен, пока пидарасы из Dropbox не отключили прямые сслыки</span></a></span> моей библиотеки <br>
-              Если у вас есть аккаунт на yandex’e, тогда здесь моя подборка <a href="https://music.yandex.ua/users/fushka/playlists">музыки</a><br>
-              Или можете посмотреть на <a href="projects">то</a>, чем я занимался большую часть своей жизни</p></div>
-
-      <div class="paragraph"><h2>Остальное не важно.</h2></div>
-    </div>
-
-    <div class="footer"><span></span>
-    </div>
-
-
-  </div>
-</body>
+{% block content %}
+  
+<div>
+<img src="static/assets/face_s.png" class="face"></img>
+</div>
+<div class="container">
+<div class="name">СЛАВА<br>ДОРОФЕЕВ
+</div>
+<h2 style="color:#F9832E; margin-bottom: 2em; font-weight:bold; margin-left:16.5em;">PM|PO|dev</h2>
+<p>Рожден женщиной, живет с женщиной. Любит сына и смотреть в окно</p>
+<p>Любимая шутка:</p>
+<h4 style="margin-left:12em; margin-bottom:2em; color:#000;">«Комплексный обед состоит из действительной и мнимой части»</h4>
+<p>Я рассказывал его жене раз 30. Или 40. Может все 100. Я так проверяю, что она меня любит. Жена, наверное, догадывается и поэтому всегда смеется</p>
+<p style="margin-bottom: 34x;">Увы, но с детьми это не работает. Они смеются над <i>несмешными</i> и полностью игнорируют <i>смешное</i>.</p>
+<br>
+<p style="color:#000; font-weight:400;">20 лет опыта в разных видах бизнеса - страхование, банковская деятельность, фандрайзинг, строительство, продажи. От продуктового и проектного 
+менеджмента в IT до полевого сейла, от мальчика по разносу кофе до создания бизнеса <span style="font-style:italic; font-weight:200;">(не очень успешного, правда ¯\_(ツ)_/¯)</span></p>
+<p style="color:#000; font-weight:400;">Рабочие умения в SQL (mySQL|MariaDB) + JQL (Jira QL), Python3 (jupiter|pandas|plotly|django), HTML/CSS, BPMN, Jira|Confluence, 
+Slack, DataGrip, Jupiter, GitHub, Mautic, Sketch, Balsamiq, Figma, Adobe, в аффилиатных системах, пост-беках, клоакинге, api, 
+масс-мейлинге, GA|GTM, QA, веб и мобильной разработке</p>
+<br> 
+<p>В разделе проектов мой <a href="projects" style ="font-weight:200;">трудовой путь</a>, в песочнице - пет-проекты для развлечения, в блоге - мусор</p>
+<p>Если вдруг вам нужен человек-дятел, швец, жнец и на дуде дудец - мои реквизиты для связи в консоли<p>
+</div>
+</div>
+{% endblock %}

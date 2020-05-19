@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{%block title %}Library{% endblock %}
+
+{% block content %}
+	
+	{% if folders %}
+	<h2>Folders</h2>
+	{% for key, value in folders %}
+	<div>
+		<p><a href="{% url 'libviadrb:get_books_list' %}?fld={{ value }}">{{ key }}</a></p>
+	<div>
+	{% endfor %}
+	{% endif %}
+	
+	{% if books %}
+	<h2>Books</h2>
+	{% for key, value in books %}
+	<div>
+		<p><a href="{% url 'libviadrb:get_book' %}?book={{ value }}">{{ key }}</a></p>
+	<div>
+	{% endfor %}
+	{% endif %}
+	
+	
+{% endblock %}

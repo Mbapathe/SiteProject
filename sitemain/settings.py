@@ -26,10 +26,9 @@ SECRET_KEY = '&0fvo#76l&^^q*-yr(-vkd!86-3)a54ndo-ybmm2nm)kb67u%t'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'mbapathe.pythonanywhere.com',
+    'ba913429.ngrok.io',
     '127.0.0.1',
-	'www.pryanik.me',
-	'pryanik.me',
+	'localhost'
     ]
 
 # Application definition
@@ -42,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'libviadrb',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static')
-MEDIA_URL = 'media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/')
