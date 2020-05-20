@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:opds="http://opds-spec.org/2010/catalog"> <id>tag:search:new:book:</id>
+ <title>Библиотека по состоянию на {% now "jS F Y H:i" %}</title>
+ <icon>/favicon.ico</icon>
+ 
+
+	
+ {% if folders %}   
+ {% for key, value in folders %}
+ <entry> <updated>{% now "jS F Y H:i" %}</updated>
+ <id>tag:search:new:genres</id>
+ <title>{{ key }}</title>
+ <content>{{ value }}</content>
+ <link href="{% url 'libviadrb:opds' %}?fld={{ value }}" type="application/atom+xml;profile=opds-catalog" />
+ </entry>
+ {% endfor %}
+ {% endif %} 
+ 
+{% if 'book' not in request.GET %}
+ {% for key, value in books %}
+ <entry> <updated>{% now "jS F Y H:i" %}</updated>
+ <id>tag:search:new:genres</id>
+ <title>{{ key }}</title>
+ <content>{{ value }}</content>
+ <link href="{% url 'libviadrb:opds_get_book' %}?book={{ value }}" type="application/atom+xml;profile=opds-catalog" />
+ </entry>
+ {% endfor %}
+{% else %}
+ <entry> <updated>{% now "jS F Y H:i" %}</updated>
+ <id>tag:book:{{ name }}</id>
+ <title>{{ name }}{{ dim }}</title>
+ <author> <name></name></author>
+ <dc:language>ru</dc:language>
+ <dc:format>{{ dim|slice:'1:' }}</dc:format>
+ <dc:issued>2018</dc:issued>
+ <content type="text/html">{{name}}&lt;br/&gt;Год издания: 2018&lt;br/&gt;Формат: fb2&lt;br/&gt;Язык: ru&lt;br/&gt;Размер: 1057 Kb&lt;br/&gt;Скачиваний: 2220&lt;br/&gt;Серия: Star Wars (fan-fiction)&lt;br/&gt;</content>
+ 
+ <link href="{{ link }}" rel="http://opds-spec.org/acquisition" type="application/{{ dim|slice:'1:' }}" />
+ 
+ </entry>
+{% endif %}
+
+</feed>

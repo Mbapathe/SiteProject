@@ -1,432 +1,186 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
 
-<html lang="ru">
+{% block header %}<link rel="stylesheet" href="{% static 'css/projects.css' %}"/>{% endblock %}
+{% block title %}Мои проекты{% endblock %}
 
-<head>
-  <meta charset="utf-8">
-  <link rel="icon" type="image/svg+xml" href="static/icons/favico.png">
-  {% load static %}
-  <link rel="stylesheet" href="{% static "css/projects.css" %}"/>
-  <link rel="stylesheet" href="{% static "css/common.css" %}"/>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
-    </style>
-</head>
+{% block content %}
+<img src="{% static 'assets/timeline.png' %}" style="margin-left:2em; margin-bottom:10em; position:fixed; display:block;">
 
-<title>Проекты
-</title>
-
-<body>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-97217179-1', 'auto');
-  ga('send', 'pageview');
-
-  </script>
-
-  <div class="page">
-
-    <div class="left-side blind3">
-      <div class="left-side blind2">
-        <div class="left-side blind1">
-          <img src="static/assets/timeline.png" style="margin-left:68px; margin-top: 0px;">
-        </div>
-      </div>
-    </div>
-
-    <div class="header">
-      <div class="menu">
-        <h1 class="focus">projects</h1>
-        <h1 class="rest"><a href="blog">blog</a></h1>
-        <h1 class="rest"><a href="me">me</a></h1>
-        <h5 class="contacts">скайп: v.dorofeev.<br>телефон: 0 (67) 408-20-66</h5>
-      </div>
-    </div>
-
-    <div class="right-side">
-      <ul class="feed"><h3></h3>
-        <li><h4 class="skill">Дизайн</h4>
-          <img src="static/icons/icon_ai.png" class="right-side-icon">
-          <img src="static/icons/icon_ps.png" class="right-side-icon">
-          <img src="static/icons/icon_id.png" class="right-side-icon">
-          <img src="static/icons/icon_sk.svg" class="right-side-icon">
-          <img src="static/icons/icon_blq.png" class="right-side-icon">
-        </li>
-        <li class="description">
-          <p class="p1">Ну, всего понемногу. <b>Balsamiq</b> просто нравиться, я его использовал для быстрых прототипов и техдизайна, особенно для ТЗ. Дизайн этого сайта сделан в <b>Sketch'е</b>
-            и я думаю, что это <i>/*пока*/</i> лучший продукт для прототипирования интерфейсов. <b>Illustrator</b> наконец-то научился "нарезать" под Android и iOS экраны, там же по привычке
-            делаю кнопки, иконки и логотипы. Например, вот несколько
-            <span class="tooltip"><a>статичных штук<span>
-              <img src="static/icons/icon_bb.png" style="width: 40px; margin: 5px 5px;">
-              <img src="static/icons/icon_pbm.png" style="width: 40px; margin: 5px 5px;">
-              <img src="static/icons/icon_css.svg" style="width: 40px; margin: 5px 5px;">
-              <img src="static/icons/icon_html.svg" style="width: 40px; margin: 5px 5px;"></span></a></span> и
-              <span class="tooltip"><a>анимированных<span style="width:155px !important;">
-                <img src="static/icons/btn_anim_down.gif" style="height: 60px; margin: 5px 5px;">
-                <br><img src="static/icons/btn_anim_anal.gif" style="height: 60px; margin: 5px 5px;">
-                </span></a></span>.
-            Если вы качнёте документ или презентацию с этого сайта, то знайте - скорее всего она собрана в <b>InDesign'е</b>.</p>
-        </li>
-        <li><h4 class="skill">Типа программирование</h4>
-          <img src="static/icons/icon_python.png" class="right-side-icon">
-          <img src="static/icons/icon_java.png" class="right-side-icon">
-          <img src="static/icons/icon_sql.png" class="right-side-icon">
-        </li>
-        <li class="description">
-          <p class="p1">Здесь все просто - я не разработчик, "но могу посмотреть". <b>Python</b> лег на душу и задачи на <a href="http://www.codeabbey.com/">CodeAbbey</a> я решал только на нём (спасибо <a href="https://www.udacity.com/">Udacity</a> за неплохой онлай-курс). <b>Java</b> "зашла" как результат работы в области мобильной разработки - в итоге двухмесячный джуниорский курс от <a href="http://univer-pulse.com.ua/">InfoPulse</a>. Ничего особенного, но синтаксис понимаю. <b>SQL</b> осваивался на <a href="http://www.sql-ex.ru">exSQL</a> простым решением всех задач подряд. В детстве был QBasic, и даже VBA, который "крутили" для любительской БД на MS Access в бухгалтерии с помощью встроенной справки и "матери", был Turbo Pascal и Delphi в институте, но кому это надо?!</p>
-        </li>
-        <li><h6 class="skill">Писал код вот в этом</h6>
-          <img src="static/icons/icon_eclipse.png" class="right-side-icon">
-          <img src="static/icons/icon_as.png" class="right-side-icon">
-        </li>
-        <li class="description">
-          <p class="p1"><i> //В смысле, в обморок не упаду</i></p>
-        </li>
-        <li><h6 class="skill">Веб, вёрстка, CMS</h6>
-          <img src="static/icons/icon_css.svg" class="right-side-icon">
-          <img src="static/icons/icon_html.svg" class="right-side-icon">
-          <img src="static/icons/icon_django.png" class="right-side-icon">
-        </li>
-        <li class="description">
-          <p class="p1">Этот сайт - пример, что я что-то слышал о вёрстке сайтов. Плюс немного Django для блога.
-          </p>
-        </li>
-        <li><h4 class="skill">Управление проектом</h4>
-          <img src="static/icons/icon_redmine.png" class="right-side-icon">
-          <img src="static/icons/icon_git.png" class="right-side-icon">
-          <img src="static/icons/icon_zeplin.png" class="right-side-icon">
-          <img src="static/icons/icon_slack.svg" class="right-side-icon">
-          <img src="static/icons/icon_proj.png" class="right-side-icon">
-        </li>
-        <li class="description">
-          <p class="p1">Странный раздел обо всём, что связанно с менеджментом проектов. На <b>Redmine</b>, например, вёлся проект Блокбастера <i>/*интерфейс на любителя, конечно*/</i>.
-            С другой стороны, проект можно вести в любой среде, удобной для тебя и команды - от таблички на <b>Же-Драйв</b> или доски в офисе до <b>Jira</b>
-            или схожего монстра. В начале я даже полгода использовал <b>1C Bitrix</b> - и для управления бизнесом, командой, и для управления проектом.
-            <i>/*Тогда мы планировали сделать indoor-навигацию на <b>биконах</b>*/</i>. Командная коммуникация идет преимущественно в <b>Slack</b>, там же релизы, тесты, срач и флуд.
-            <br><b>Zeplin</b> - отличный плагин для <b>Sketch'а</b>, позволяющий облегчить работу команды (особенно тех, кто будет верстать интерфейс).</p>
-            <p class="p1">Если уж речь идет о проектном менеджменте, то теоретическая подготовка сильно облегчает практику:) Вот заветные слова любого pm'a - <b>Agile/Scrum, Kanban, Waterflow</b> и нетвердая уверенность, что дочитаю PMBOK до конца.
-            </p>
-        </li>
-        <li><h6 class="skill">Зачатки UML и BPMN нотаций</h6>
-          <img src="static/icons/icon_visio.png" class="right-side-icon">
-          <img src="static/icons/icon_drawio.png" class="right-side-icon">
-        </li>
-        <li class="description">
-          <p class="p1">Не сказать, что часто сталкивался с необходимостью описания бизнес-процессов или классов, но в ряде случаев (проект с банком, автоцентром, детским развлекательным центром) приходилось
-		  <span class="tooltip"><a>рисовать<span>Что-то типа такого:<br><img src="static/assets/BPMN_diagram.png" style="width:100%;"></span></a></span> и <span class="tooltip"><a>рисовать<span>Или что-то типа такого:<br><img src="static/assets/uml_diagram.png" style="width:100%;"></span></a></span>.
-          </p>
-        </li>
-	  </ul>
-    </div>
-
-    <div class="container">
+	<div class="container">
       <div class="conteiner-top">
-        <img src="static/icons/icon_pbm.png" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">PingByMall</h1>
-            <h6>Мобильный сервис для магазинов и торговых центров</h6>
-          </div>
-        </div>
+        <img src="{% static 'icons/icon_pj.png' %}" class="project-icon"></img></div>
       <div class="container-middle">
-        <p>Суровый проект про то, как ещё больше продавать вещей в оффлайн-магазине, если пользователь будет использовать смартфон во время блужданий между полками.<br></p>
-        <p>Мы решили, что если в смартфоне будет куча важной, полезной и интересной инфы, то это здорово подстегнет продажи - чеки станут длинее, цифры больше и всё такое.</p>
-        <div class="citate">
-          <div class="qoute"><p>Что такое «важная, полезная и интересная инфа»? В нашей картине хрупкого человеческого счастья - это скидки, уценки, остатки, рецепты, рекомендации,
-            шутки, складкие остатки, новый ассортмент, т.е. все то, за что едят свой хлеб маркетологи
-            и мерчи, получают по шапке управленцы по запасам и то, что сложно выложить скопом на настоящую полку.
-			</p>
-          </div>
-        </div>
-        <br>
-        <p>Оценив вероятное количество данных, мы прикрутили к нашей теме <span class="tooltip"><a>биконы<span>Это такие маленькие bluetooth-маячки, которые можно использовать для рекламы, игр,
-          навигации:<br>На фотографии представлен бикон от Estimote<br><img src="static/assets/ibeacon.jpg" style="width:100%;"></span></a></span>, чтобы контент внутри мобильного приложения отображался в соответствии с местоположением
-          пользователя внутри магазина.</p>
-		<p>Ниже есть ссылки на <span class="tooltip"><a>демо<span>Малопрезентабельное демо на плеймаркете. Оно вам нужно без биконов? Лучше позвоните и я вам все покажу</span></a></span> и описание.</p>
+		<h1>PlasticJam</h1>
+		<h6>Эссейная ниша</h6>
+        <p>Бизнес в эссейной нише для иностранных клиентов. Эссейная часть продукта, состоящая из сайтов и лендингов, клиентского кабинета 
+		с кастомизацией, самописная CRM и райтерская платформа. Плюс аффилиатная система для вебмастеров</p>
+		<p>Из яркого - миграция с первого Angular на второй 
+		с параллельной сменой клиентского интерфейса и функционала, запуск магазина готовых работ, реализация АВ-тестов, интеграция с Mautic, перезапуск 
+		вебмастерского сайта, моделирование системы с кешбеком, реализация постбеков, клоакинг и куча другого</p>
+        <p>Отличные три года работы, отличные люди, с которыми было прикольно работать в одной упряжке</p>
       </div>
-      <div class="container-bottom">
+    </div>
+	
+	<div class="container">
+	<h1 style="color:#C2C2C2;">Эпопея с биконами и стартапом</h1>
+      <div class="conteiner-top">
+        <img src="{% static 'icons/icon_pbm.png' %}" class="project-icon"></img></div>
+      <div class="container-middle">
+		<h1>PingByMall</h1>
+		<h6>Мобильный сервис для магазинов и торговых центров с использованием биконов</h6>
+        <p>Проект по интеграции онлайн-севисов в оффлайн-ритейле. Идея заключалась в том, чтобы связать локацию, смартфон пользователя и контент во время 
+		блужданий между полками магазина.<br></p>
+        <p>Телефон в этом сценарии - безразмерная виртуальная полка с бонусами, рекламой, уценкой и складскими остатками прямо перед глазами клиента. Оффлайн 
+		позволяет пощупать товар руками и сразу же его забрать, а <span class="tooltip"><a>биконы<span>Это такие маленькие bluetooth-маячки, которые можно 
+		использовать для рекламы, игр, навигации:<br>На фотографии представлен бикон от Estimote<img src="{% static 'assets/ibeacon.jpg' %}" style="width:100%;">
+		</span></a></span> позволяют таргетировать контент максимально близко к реальному товару</p>
+		<p>Проект не взлетел, демо за давностью лет уже не актуально, но сохранилась небольшая презентация с которой я носился по Украине в поисках клиентов.</p>
+      </div>
+
+      <div class="conteiner-top">
+        <img src="{% static 'icons/icon_nologo.svg' %}" class="project-icon"></img></div>
+      <div class="container-middle">
+		<h1>Справочник для Киевского ботсада</h1>
+		<h6>Продолжение идеи с биконами. Теперь для обучения и покупок растений в ботсаду</h6>
+        <p>Всё началось с тёщи. Честно. Она большой поклонник озеленения участка, отличает <span class="tooltip"><a>азалию<span><img src="{% static 'assets/azalia.jpg' %}" style="width:100%;">
+		</span></a></span> от <span class="tooltip"><a>альстромерии<span><img src="{% static 'assets/alstromeria.jpg' %}" style="width:100%;"></span></a></span>, да и вообще прекрасный человек. Во время одной 
+		из прогулок по киевскому ботсаду она с досадой констатировала, что даже если и увидишь интересное растение, то узнать его название, а уж тем более купить не представляется возможным - табличек 
+		часто нет и специалисты рядом не ходят</p>
+          <p>Тогда и родилась идея ипользовать функционал PBM, чтобы сделать мобильный ботанический справочник с возможностью покупки расстений. Идея проста - использовать маячки, чтобы фильтровать изображения (и описания) расстений в мобильном приложении. Подобный способ позволит облегчить
+            визуальную идентификацию. Ну, а потом можно узнать о расстении и его приобрести</p>
+		<p>Презентация для ботсада им. Фоменко сохранилась</p>
+      </div>
+ 
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_bb.png' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h1>Blockbuster</h1>
+			<h6>Коммерческая удача с биконами. И самая моя большая неудача</h6>
+			<p>Мобильная программа лояльности для развлекательного центра «Блокбастер» в Киеве. В процессе поиска клиентов и потенциальных ниш для развития идеи с 
+			биконами выросла наиболее интересная концепция - использовать биконы как базу для программы лояльности</p>
+			<p>Развлекательный центр был разбит на зоны (например, "каток", "фудкорт" или "кинозал"). Вход в эти зоны платный или же длительное нахождение в таких зонах предполагает 
+			траты денег - если долго находятся на фудкорте, то, скорее всего, потратились как минимум на кофе. Биконы позволяли отслеживать появление и время посетителя в "зоне", а логика программы лояльности - 
+			начислять бонусы на счёт</p>
+			<p>Ожидалось, что посетитель ходит по Блокбастеру - в кино, на каток, зайдёт перекусить. А спустя время к нему в приложение поступает уведомление, что он получил бонусы,
+			которые он сможет потратить на оплату других услуг центра или покупку товаров</p>
+		</div>
+	
+
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_bender.png' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h1>И немного о других проектах</h1>
+			<h6>Не срослось <i>/*и, возможно, к счастью*/</i></h6>
+			<h3>Банк</h3> 
+			<p>Процессинг карточных переводов через сайт для одного киевского банка. Уже даже набросали структуру экранов и архитектуру бекэнда. Пришлось изучить спеки по PCI DSS</p>
+			<h3>CTO</h3>
+			<p>Большой автодилер хотел сделать мобильный продукт по приемке автомобилей, с возможностью продаж допоборудования и акцессуаров. Предполагалась интеграция с SAP'ом и специальным софтом Wolkswagen. 
+			Это был слишком большой клиент для нашей компании)</p>
+			<h3>Детский развлекательный центр</h3>
+			<p>Наверное, самый проработанный и невзлетевший проект <i>/*С явной недооценкой стоимости*/</i>. Планировалось мобильное приложение с внутренним клиент-банком, играми и рейтингами, поддержкой indoor-локации, а на бекэнде - "банковское ПО" с начислением процентов, CMS и
+                аналитика. Было готово всё - техдизайн мобильного клиента, архитектура БД, логика со спрайтами для мини-игры</p>
+		</div>
+
+	
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_mdm.png' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h1>MobiDM</h1>
+			<h6>Параллельно с биконами пробовали продвигать сервис по управлению смартфонами</i></h6>
+			<p>Ныне несуществующая компания, ресселерами которой мы выступали в 2014-2015 гг. Главный продукт - облачный сервис по контролю за подключенными к 
+			системе смартфонами. Это когда безопасность хочет отключать камеры на корпоративных смартфонах или подчистить почту после увольнения сотрудника. 
+			Или <a href="https://fb.com">facebook</a> "забанить". Слишком дорогой продукт для рынка в те бурные времена</p>
+		</div>
+	
+	<div class="container-bottom">
         <div class="pbm-background">
-		  <h4 class="btn"><a href="https://play.google.com/store/apps/details?id=ua.net.pbm.loyalty">Демо</h4>
-          <h4 class="btn"><a href="static/assets/p_pbm.pdf" target="_blank">Презентация</a></h4>
-        </div>
+          <h4 class="btn"><a href="{% static 'assets/p_garden.pdf' %}" target="_blank">Ботсад</a></h4>
+			<h4 class="btn"><a href="{% static 'assets/p_pbm.pdf' %}" target="_blank">PBM</a></h4>
+		</div>
       </div>
     </div>
 
-    <div class="separator">
-        <h6></h6>
-      </div>
-
-    <div class="container">
-      <div class="conteiner-top">
-        <img src="static/icons/icon_nologo.svg" class="project-icon"></img>
-        <div class="container-top-name">
-          <h1 class="project-name">Справочник для Киевского ботсада</h1>
-          <h6>Ищу партнера!<span class="emoji" style="background-position: -60px 0px;"></span></h6>
-        </div>
-      </div>
-      <div class="container-middle">
-        <p>Всё началось с тёщи. Честно. Она большой поклонник озеленения участка, отличает <span class="tooltip"><a>азалию<span><img src="static/assets/azalia.jpg" style="width:100%;"></span></a></span> от <span class="tooltip"><a>альстромерии<span><img src="static/assets/alstromeria.jpg" style="width:100%;"></span></a></span>, да и вообще прекрасный человек. Во время одной из прогулок по киевскому ботсаду она с досадой констатировала,
-          что даже если и увидишь интересное растение, то узнать его название, а уж тем более купить не представляется возможным - табличек часто нет и специалисты рядом не ходят.
-          Тогда и родилась идея ипользовать функционал PBM, чтобы сделать мобильный ботанический справочник с возможностью покупки расстений. </p>
-          <div class="citate">
-            <div class="qoute"><p>Планов было много. Виделись светлоликие школьники и студенты, слушающие лекции прямо в ботсаду. Толпы посетителей, сверяющихся с интересными маршрутами. Бурно жестикулирующие ландшафтные дизайнеры и их клиенты. Ленивые пенсионеры, с подозрением принюхивающиеся к странному цветку. Не хватало только шахмат, но о них уже подумали <span class="tooltip"><a>классики<span><img src="static/assets/12.jpg" style="width:100%;"></span></a></span>.
-              </p>
-            </div>
-          </div>
-          <br>
-          <p>Да, опять <span class="tooltip"><a>биконы<span>Это такие маленькие bluetooth-маячки, которые можно использовать для рекламы, игр,
-            навигации:<br>На фотографии представлен бикон от Estimote<br><img src="static/assets/ibeacon.jpg" style="width:100%;"></span></a></span>. Идея проста - использовать маячки, чтобы фильтровать изображения (и описания) расстений в мобильном приложении. Подобный способ позволит облегчить
-            визуальную идентификацию. Ну, а потом можно узнать о расстении и его приобрести. Эх, сладкие грёзы<span class="emoji" style="background-position: -200px -380px;"></span><span class="emoji" style="background-position: -200px -380px;"></span><span class="emoji" style="background-position: -200px -380px;"></span></p>
-      </div>
-      <div class="container-bottom">
-        <div class="garden-background">
-          <h4 class="btn"><a href="static/assets/p_garden.pdf" target="_blank">Презентация</a></h4>
-        </div>
-      </div>
-    </div>
-
-    <div class="separator">
-        <h6></h6>
-      </div>
-
-    <div class="container">
-      <div class="conteiner-top">
-        <img src="static/icons/icon_bb.png" class="project-icon"></img>
-        <div class="container-top-name">
-          <h1 class="project-name">Blockbuster</h1>
-          <h6>Мобильная программа лояльности для развлекательного центра «Блокбастер» (Киев)</h6>
-        </div>
-      </div>
-      <div class="container-middle">
-        <p>Еще одна тема про <i>биконы</i>. Вместе с развлекательным центром <a href="http://www.blockbuster.ua/">«Блокбастер»</a> мы решили сделать пассивную программу лояльности. Это как бы ты ходишь
-          по Блокбастеру, в кино там или на каток, или зайдешь перекусить, а потом - бац, и тебе нотифай приходит, что ты кучу бонусов отгрёб от развлекательного центра.<br></p>
-        <div class="citate">
-          <div class="qoute"><p>Спрашиваешь, как это всё работает? Ну, мы расставили биконы по развлекательному центру и разбили Блокбастер на зоны. Всякий раз, когда пользователь попадает в зону,
-            приложение это отмечает, а потом (если пользователь провел достаточно времени) рассчитывает и закидывает ему бонусы на счёт.</p>
-          </div>
-        </div>
-        <br>
-        <p>Идея проста. Если ты провел 10 минут на катке, то вероятнее всего ты оплатил вход. Полчаса в кинозале? Мы знаем сколько стоит билет. 20 минт на фудкорте? Хм… ну, чашку кофе выпил точно. С помощью биконов мы знаем, где ты был и сколько времени провел. Мы даже готовы предположить сколько ты потратил. И накинуть тебе бонусов за это. Бонусы можно отоварить там же, в приложении, купив призы.</p>
-        </div>
-      <div class="container-bottom">
-        <div class="bb-background">
-          <h4 class="btn"><a href="#">AppStore</a></h4>
-          <h4 class="btn"><a href="https://play.google.com/store/apps/details?id=ua.net.blockbuster.loyalty&hl=ru">PlayMarket</a></h4>
-        </div>
-      </div>
-    </div>
-
-    <div class="separator">
-      <h6>Ух ты, целый год пролетел!</h6>
-    </div>
-
-    <div class="container">
-      <div class="conteiner-top">
-        <img src="static/icons/icon_footurum.png" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">Footurum</h1>
-            <h6>Мобильный сервис по обучению новым навыкам</h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <p>Не мой проект, но я был причастен на самой ранней стадии <i>/*юзер стори и техдизайн MVP (забракованного)*/</i> и, поскольку мне очень интресна тема обучения и это проект друзей, то решил оставить.
-          Изначально была идея сделать мобильное приложение, с помощью которого можно выучить новый навык - английский или тайм-менеджмент, улучшить психическую устойчивость или
-          подготовиться к марафону. Прогресс оценивался в "футах" <i>/*мне хочеться считать, что футурум - это <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%BB%D1%8E%D0%B7%D0%B8%D1%8F">
-          аллюзия</a> к <span class="tooltip"><a>Пушкину<span>"...Труден первый шаг<br>И скучен первый путь. Преодолел<br>Я ранние невзгоды. Ремесло<br>Поставил я подножием искусству;" </span></a></span>*/</i>,
-          была идея подключения живого коуча (за <span class="emoji" style="background-position: -260px -520px;"></span>, конечно). Под конец проект сконцентрировался на беге и текущий статус мне не известен.
-          <div class="citate">
-            <div class="qoute">
-              <p>Как пример сложного развития идеи, отмечу, что Footurum начинался как приложение для родителей и с целью организации детского развития - курсы, секции, занятия и синхронизациий планеров родителей.<br>
-                А потом, уже трансформировался в универсальною мобильную платформу по обучению.
-              </p>
-            </div>
-          </div>
-          <br>
-          <p>Мне очень интересна тема образования. Смартфон может кардинально изменить методологию образования (как это сделал Интернет) - другой ритм обучения <i>/*Ведь смартфон всегда под рукой*/</i>, другая организация контента <i>/*Читать? Смотреть? Слушать? Ах да, и маленький экран*/</i>, другая продолжительность занятий и их интенсивность, другое закрепление материала и прогресс. Всё другое
-          </p>
-      </div>
-      <div class="container-bottom">
-        <div class="footurum-background">
-        </div>
-      </div>
-    </div>
-
-    <div class="separator">
-        <h6></h6>
-      </div>
-
-    <div class="container">
-      <div class="conteiner-top">
-        <img src="static/icons/icon_bender.png" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">Всякое-разное</h1>
-            <h6>Кратко о проектах, с которыми не срослось <i>/*И возможно к счастью*/</i></h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <div style="width:10%; border-bottom:1px dashed #355C7D; margin:17px auto;">
-        </div>
-
-        <h3 style="text-align: center;">Банк</h3> <p>Процессинг карточных переводов через сайт для одного киевского банка. Уже даже набросали структуру экранов и архитектуру бекэнда.</p>
-          <div class="citate">
-            <div class="qoute">
-              <p>В наследство мне досталось знание значения термина <b>PCI DSS</b>, его стоимости и факта, что <a href="https://cloud.google.com/security/compliance/pci-dss/">Google Cloud Platform</a> такую сертификацию прошла</p>
-            </div>
-          </div>
-        <div style="width:10%; border-bottom:1px dashed #355C7D; margin:17px auto;">
-        </div>
-        <br>
-        <h3 style="text-align: center;">CTO</h3>
-        <p>Большой автодилер хотел сделать мобильный продукт по приемке автомобилей, с возможностью продаж допоборудования и акцессуаров. Ах, да. Там еще планировалась интеграция с SAP'ом. Большой кит -
-          большие цели. Не срослось</p>
-        <div style="width:10%; border-bottom:1px dashed #355C7D; margin:17px auto;">
-        </div>
-        <br>
-        <h3 style="text-align: center;">Детский развлекательный центр</h3><p>Наверное самый проработанный и невзлетевший проект <i>/*С явной недооценкой стоимости*/</i>.</p>
-          <div class="citate">
-            <div class="qoute">
-              <p>Вкратце, планировалось мобильное приложение с внутренним клиент-банком, играми и рейтингами, поддержкой indoor-локации, а на бекэнде - "банковское ПО" с начислением процентов, CMS и
-                аналитика. Короче, вы поняли<span class="emoji emoji-youknow"></span></p>
-            </div>
-          </div>
-          <br>
-        <p>Было готово всё - и техдизайн мобильного клиента, и архитектура БД, и логика с спрайтами для мини-игры
-          <i>/*А самих игр планировалось аж три!*/</i>. Был даже Гант и <span class="tooltip"><a>pre-команда<span>Тот вид команд, когда все подписались, но никто ничего не делает.</span></a></span></p>
-      </div>
-      <div class="container-bottom">
-        <div class="bender-background">
-        </div>
-      </div>
-    </div>
-
-    <div class="separator">
-        <h6></h6>
-      </div>
-
-    <div class="container">
-      <div class="conteiner-top">
-        <img src="static/icons/icon_mdm.png" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">MobiDM</h1>
-            <h6>Сервис по управлению смартфонами</h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <p>Ныне несуществующая компания, ресселерами которой мы выступали в 2014-2015 гг. Главный продукт - облачный сервис по контролю за подключенными к системе смартфонами. Ну, там безопасники
-          хотят камеры отключать на корпоративных смартфонах или подчистить почту после увольнения сотрудника. Или <a href="https://fb.com">facebook</a> "забанить". Не сложилось, если чё<span class="emoji emoji-shutup"></span></p>
-      </div>
-      <div class="container-bottom">
-        <div class="veliq-background">
-        </div>
-      </div>
-    </div>
-
-    <div class="separator">
-      <h6>И ещё год мимо! Там, ниже, будет совсем кратко и кучно</h6>
-    </div>
-
-    <div class="container">
-      <div class="conteiner-top">
-        <img src="static/icons/icon_termolife.png" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">Termolife</h1>
-            <h6>6 месяцев продаж минеральной ваты</h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <p>В приниципе, нечего рассказывать. Был один стоящий проект, ЖК "Зоряный", но он не сросся - не прошел ценой. А так, в активе с тех короткотёчных времён - разбираюсь в утеплителях, барьерах, фасадах, кровлях, стенах и полах. И в производстве минваты. Немного. <i>/*Что, я зря на завод ездил?*/</i> </p>
-      </div>
-      <div class="conteiner-top">
-        <img src="static/icons/icon_nologo.svg" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">Дорокс</h1>
-            <h6>Стройка и ремонт. Сметы и договора</h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <p>Что-то крутил с продажами. Из веселого - проект по электрике на Конче-Заспе <i>/*Тот случай, когда я нихуя не понимал и был только рад, что нас подвинули другие*/</i> и проект с субподрядом у большой строительной компании. Пришлось делать полноценные сметы и акты. Привет <a href="#">АВК-5</a>, стервозным тёткам-сметчицам и непритязательному строительному юмору</p>
-      </div>
-      <div class="conteiner-top">
-        <img src="static/icons/icon_km.png" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">Kerama Marazzi</h1>
-            <h6>Плитка и керамогранит. Это последняя часть моей "строительной" жизни. </h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <p>Одна из самых сильных привязанностей к месту работы за последние годы. До сих пор придирчиво оглядываю стены и пол в помещениях и радуюсь, узнав знакомый узор. Люблю облицовочную керамику, особенно изразцовую. Бурный кусок жизни с командировками</p>
-      </div>
-
-      <div class="container-bottom">
+    
+		<div class="container">
+	<h1 style="color:#C2C2C2;">Моя строительная жизнь</h1>
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_termolife.png' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h2>Termolife</h2>
+			<h6>6 месяцев продаж минеральной ваты</i></h6>
+			<p>В приниципе, нечего рассказывать. Был один стоящий проект, ЖК "Зоряный", но он не сросся - не прошел ценой. 
+			А так, в активе с тех короткотёчных времён - разбираюсь в утеплителях, барьерах, фасадах, кровлях, стенах и полах. И в производстве минваты. Немного</p>
+		</div>
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_nologo.svg' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h2>Дорокс</h2>
+			<h6>Стройка и ремонт. Сметы и договора. Первая и, надеюсь, последняя моя строительная компания</h6>
+			<p>Что-то крутил с продажами. Из веселого - проект по электрике на Конче-Заспе <i>/*Тот случай, когда я нихуя не понимал и был только рад, 
+			что нас подвинули другие*/</i> и проект с субподрядом у большой строительной компании. Пришлось делать полноценные сметы и акты. 
+			АВК-5, стервозные тётки-сметчицы и непритязательный строительный юмор</p>
+		</div>
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_km.png' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h2>Kerama Marazzi</h2>
+			<h6>Плитка и керамогранит</h6>
+			<p>Одна из самых сильных привязанностей к месту работы. До сих пор придирчиво оглядываю стены и пол в помещениях и радуюсь, 
+			узнав знакомый узор. Люблю облицовочную керамику, особенно изразцовую. Бурный кусок жизни с командировками</p>
+		</div>
+		<div class="container-bottom">
         <div class="constr-background">
           <h4 class="btn"><a href="http://kerama-marazzi.com/">Marazzi</a></h4>
-          <h4 class="btn"><a href="http://www.termolife.com.ua/">Termolife</a></h4>
         </div>
-      </div>
-    </div>
-
-	<div class="separator">
-      <h6>За раз лет пять! Ниже - десятка</h6>
-    </div>
-
-    <div class="container">
-      <div class="conteiner-top">
-        <img src="static/icons/icon_kyiv.png" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">Банк Киев</h1>
-            <h6>2 года абстракции в закутке</h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <p>Кризис и зарплата в 2000 грн. Это всё, что нужно знать. Угораздило же устроиться в банк весной 2008 года. До этого я полагал, что банк это высшие сферы. Ну, там дорогие твидовые костюмы, денежный загар ни лице, стильные тёлки в <i>строго-развратно-офисной</i> одежде.
+		</div>
+	</div>	
+	
+	<div class="container">
+	<h1 style="color:#C2C2C2;">Седая древность</h1>
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_kyiv.png' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h2>Банк Киев</h2>
+			<h6>2 года абстракции в закутке</i></h6>
+			<p>Кризис и зарплата в 2000 грн. Это всё, что нужно знать. Угораздило же устроиться в банк весной 2008. До этого я полагал, что банк это высшие сферы. Ну, там дорогие твидовые костюмы, 
+			денежный загар ни лице, стильные тёлки в <i>brazzers-style</i> одежде.
           Хрена. Комнатенка в цоколе, ездить в ебени, отчет о кредитном портфеле, который собираеться на коленке <i>/*Потому-что настройку <b>SR_bank'a</b> до ума не довели*/</i>.</p>
-        <p>Из веселого - упаковка чая "Принцесса Нури", которую у меня на столе оставили толи в благодарность, толи как взятку, <span class="tooltip"><a>хороший коллектив<span>Хотя мне везде, тьфу-тьфу, с коллегами везло</span></a></span>, куча разной работы - начиная с кредитов, пластика, архивов, залогов и заканчивая оперзалом, справками для Deloitte и согласованием взаимозачетов с временной администрацией</p>
-      </div>
-      <div class="conteiner-top">
-        <img src="static/icons/icon_dnepr.png" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">Управление жилищных хозяйством</h1>
-            <h6>Быстро, чётко, бестолково</h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <p>На самом деле, было две работы в одном месте. Вначале я попал в предприятие, которое должно было заниматься арендой коммунального имущества. Вот тогда я впервые узнал о существовании лазерного дальномера. А через пару месцев я перешел в другой кабинет и занялся тендерами для ЖЕКов.
-          <br>Ок, как-то пафосно звучит. Вернее, занялся технической организацей тенедеров - объявления, документация, заявки, отчетность, казначейство, КРУ, прокуратура.
-          <div class="citate">
-            <div class="qoute">
-              <p><i>/*Я сказал "КРУ и прокуратура"? Было немного и нестрашно.*/</i></p>
-            </div>
-          </div>
-          <br>
-          <p>Пыльное, теплое лето. Серпентарий, тухлятина. Жрачка в маке</p>
-      </div>
-      <div class="conteiner-top">
-        <img src="static/icons/icon_nologo.svg" class="project-icon"></img>
-          <div class="container-top-name">
-            <h1 class="project-name">Народная</h1>
-            <h6>Первая полноценная работа. Перестрахование. Авиация</h6>
-          </div>
-      </div>
-      <div class="container-middle">
-        <p>Пришел туда мальчиком по разносу кофе. Ушёл начальником отдела перестрахования. Кабинеты и этажи. Навернул Novell Netware (единожды) и много раз - "дрова" сетевух под Win 3.11. Уже не помню, но что-то писал на VBA для базы платежек на Access, пока бухгалтерия
-          не перехала на 1С. Ниразу не админ. Расшарил интернет, завёл роман, написал несколько правил страхования и пару облигаторных договоров. Классные люди, ламповые времена. Май, секс на работе, коллективная игра в Heroes 3, Blood и DukeNukem. За 8 лет наелся и ушёл в никуда.
-        </p>
-      </div>
-
-      <div class="container-bottom">
+        <p>Из веселого - упаковка чая "Принцесса Нури", которую у меня на столе оставили толи в благодарность, толи как взятку. Хороший коллектив Куча разной работы - начиная с кредитов, пластика, 
+		архивов, залогов и заканчивая оперзалом, справками для Deloitte и согласованием взаимозачетов с временной администрацией</p>
+		</div>
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_dnepr.png' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h2>Управление жилищных хозяйством</h2>
+			<h6>Быстро, чётко, бестолково</h6>
+			<p>Две работы в одном месте. Вначале была аренда коммунального имущества. А через пару месцев в другом кабинете на том же этаже занялся тендерами для ЖЕКов.
+         Вернее, занялся технической организацей тенедеров - объявления, документация, заявки, отчетность, казначейство</p>
+		 <p>Пыльное, теплое лето. Серпентарий, тухлятина. Жрачка в маке, КРУ, прокуратура</p>
+		</div>
+		<div class="conteiner-top">
+			<img src="{% static 'icons/icon_nologo.svg' %}" class="project-icon"></img>
+		</div>
+		<div class="container-middle">
+			<h2>Народная</h2>
+			<h6>Первая полноценная работа. Перестрахование. Авиация. Секс</h6>
+			<p>Пришел туда мальчиком по разносу кофе. Ушёл начальником отдела перестрахования. Кабинеты и этажи. Навернул Novell Netware (единожды) и 
+			много раз - "дрова" сетевух под Win 3.11. Уже не помню, но что-то писал на VBA для базы платежек на Access, пока бухгалтерия
+          не перехала на 1С. Расшарил интернет, завёл роман, написал несколько правил страхования и пару договоров. Классные люди, ламповые времена. 
+		  Май, секс на работе, коллективная игра в Heroes 3, Blood и DukeNukem. За 8 лет наелся и ушёл в никуда</p>
+		</div>
+		<div class="container-bottom">
         <div class="finance-background">
         </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <img src="static/assets/face_cg.png" style="position:absolute; display:inline; width: 207px; height: auto; z-index:1; bottom: 0px; overflow:hidden; left:1074px;">
-      </img>
-    </div>
-
-
+		</div>
+	</div>	
   </div>
-</body>
+{% endblock %}

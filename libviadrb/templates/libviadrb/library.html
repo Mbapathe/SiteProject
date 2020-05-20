@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Library{% endblock %}
+{% block header %}<link rel="stylesheet" href="{% static 'css/lib.css' %}"/>{% endblock %}
+
+{% block content %}
+	<div class="container">
+      <div class="container-middle">
+		<h1>Моя dropbox-библиотека с поддержкой OPDS</h1>
+		<h6>Странный проект</h6>
+        <p>Я много читаю и часть книг храню, где попало. В свое время завел аккаунт на dropbox для хранения книг и вот решил для себя собрать ресурс, через который эти книги смогу централизированно расшарить</p>
+		<p><b>Первое:</b> все книги, доступные здесь храняться на dropbox и выгребаются через их api. Поэтому есть небольшая задержка и прелоадер я, возможно, докручу позднее
+		<br><b>Второе:</b> поскольку DB закрыл возможность прямой загрузки, то для конкретного файла апи возвращает токенизированный урл со сроком жизни только в два часа, поэтому урл со временм окажеться невалидным
+		<br><b>Третье:</b> Скачивать через web не прикольно, поэтому здесь прикручен xml каталог (как у флибусты) и книги можно скачать напрямую через приложения, 
+		поддерживающие OPDS-формат. Соответственно, сам каталог доступен по ссылке <a href='/opds'>{{ request.get_host }}/opds</a>
+		</p>
+      </div>
+    </div>
+	
+	<div class="right-side">
+	<h3 style='text-align:right; color:#F9832E; padding-right:1em;'>Dropbox feed</h3>
+    
+	  <ul>
+	  {% if folders %}
+	  <h4>Folders</h4>
+        {% for key, value in folders %}
+        <li>
+          <h5><a href="{% url 'libviadrb:get_books_list' %}?fld={{ value }}">{{ key }}</a></h5>
+        </li>
+    {% endfor %}
+	{% endif %}
+		
+	{% if books %}
+	<h4>Books</h4>
+        {% for key, value in books %}
+        <li>
+          <h5><a href="{% url 'libviadrb:get_book' %}?book={{ value }}">{{ key }}</a></h5>
+        </li>
+        {% endfor %}
+		{% endif %}
+		
+		<li>
+		  <span class="step-links" style="font-style:italic;">
+			{% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}"><b><<</b></a>&nbsp
+			{% endif %}
+
+			{% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}"><b>>></b></a>
+
+			{% endif %}
+		  </span>
+		</li>
+	  </ul>
+    </div>
+	
+{% endblock %}
