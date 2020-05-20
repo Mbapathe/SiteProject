@@ -26,9 +26,19 @@
 
 </script>
 <script>
-	console.log('%cПривет, меня зовут Слава Дорофеев. Без понятия, зачем вы инспектируете мой сайт, но если вы ищете контакты, то вот они:', 'color: black; font-size: xx-large');
-	console.log('%cskype: "v.dorofeev." или +380674082066 (телега и вайбер)', 'color: blue; font-size: xx-large');
+	console.info('%cПривет, меня зовут Слава Дорофеев. Без понятия, зачем вы инспектируете мой сайт, но если вы ищете контакты, то вот они:', 'color: black; font-size: xx-large');
+	console.info('%cskype: "v.dorofeev." или +380674082066 (телега и вайбер)', 'color: blue; font-size: xx-large');
 </script>
+  <script>
+    function collapsElement(id) {
+      if ( document.getElementById(id).style.display != "none" ) {
+        document.getElementById(id).style.display = 'none';
+      }
+      else {
+        document.getElementById(id).style.display = '';
+      }
+    }
+ </script>
 </head>
 
 <body>

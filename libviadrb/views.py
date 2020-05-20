@@ -2,10 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView
 from django.conf import settings
-from django.contrib.syndication.views import Feed
+#from django.contrib.syndication.views import Feed
 from .key import key
 import dropbox
 import re
+#from transliterate import translit, get_available_language_codes
 
 
 base_url = '/bookz'
@@ -32,9 +33,10 @@ def get_book(request):
     try:
         path_from_url = request.GET['book']
         if path_from_url:
-            dim = path_from_url[(path_from_url.rfind('.')):]
+            dim = path_from_url[(path_from_url.rfind('.'))+1:]
             name = beautify(path_from_url)
             link = dbx.files_get_temporary_link(path_from_url).link
+            #tr_name = translit(name,'ru')
         return render(request, template_name, {'link':link, 'path':path_from_url, 'name':name, 'dim':dim})
     except:
         name = 'Sorry, something went wrong ¯\_(ツ)_/¯'

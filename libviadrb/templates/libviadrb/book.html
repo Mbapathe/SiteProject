@@ -1,12 +1,38 @@
 {% extends 'base.html' %}
-
-{% block title %}Book - {{ name }}{% endblock %}
+{% load static %}
+{% block title %}Library{% endblock %}
+{% block header %}<link rel="stylesheet" href="{% static 'css/lib.css' %}"/>{% endblock %}
 
 {% block content %}
-	{{t}}
-	<h2>{{ name }}</h2>
+	<div class="container" style="width:60%; margin-left:20%;">
+      <div class="container-top">
+		{% if dim == 'pdf' %}
+        <img src="{% static 'icons/icon-pdf.svg' %}" class="project-icon"></img>
+		{% elif dim == 'fb2' %}
+        <img src="{% static 'icons/icon-fb2.svg' %}" class="project-icon"></img>
+		{% elif dim == 'epub' %}
+        <img src="{% static 'icons/icon-epub.svg' %}" class="project-icon"></img>
+		{% elif dim in 'ziprar' %}
+        <img src="{% static 'icons/icon-zip.svg' %}" class="project-icon"></img>
+		{% elif dim in 'docx' %}
+        <img src="{% static 'icons/icon-doc.svg' %}" class="project-icon"></img>
+		{% else %}
+		<img src="{% static 'icons/icon-unknown.svg' %}" class="project-icon"></img>
+		</div>
+		{% endif %}
+      <div class="container-middle">
+		<h1>{{ name }}</h1>
+		<p>{{ path }}</p>
+      </div>
+      <div class="container-bottom">
+        <h4 class="btn"><a href="{{ link }}" target="_blank">Скачать</a></h4>
+      </div>
+    </div>
+	
+	<h2></h2>
 	<div>
-		<p><a href="{{ link }}">{{ path }}</a></p>
+		<p><a href=""></a></p>
+	
 	<div>
 	
 {% endblock %}
